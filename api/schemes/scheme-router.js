@@ -1,10 +1,14 @@
 // DO NOT CHANGE THIS FILE
 const express = require('express')
 const { checkSchemeId, validateScheme, validateStep } = require('./scheme-middleware')
-const Schemes = require('./scheme-model.js')
+const Schemes = require('./scheme-model.js') //Object W/ Methods
 
+
+//Miniature Instance Of Express Server
 const router = express.Router()
 
+
+//Endpoints
 /**
   [GET] /api/schemes
 
@@ -148,4 +152,6 @@ router.use((err, req, res, next) => { // eslint-disable-line
   })
 })
 
+
+//Exports
 module.exports = router
